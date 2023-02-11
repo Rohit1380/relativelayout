@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         etemail=findViewById(R.id.etemail)
-etpassword=findViewById(R.id.etpassword)
+        etpassword=findViewById(R.id.etpassword)
         btnLogin=findViewById(R.id.btnlogin)
         tvregister=findViewById(R.id.tvregister)
 

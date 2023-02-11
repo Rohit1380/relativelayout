@@ -12,9 +12,9 @@
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
         android:text="Register"
-        android:textStyle="bold|italic"
+        android:textColorHighlight="@android:color/background_dark"
         android:textSize="30sp"
-        android:textColorHighlight="@android:color/background_dark" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/tvName"
@@ -23,13 +23,16 @@
         android:layout_below="@+id/tvregister"
         android:layout_marginTop="12dp"
         android:text="Enter your name"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvName" />
+        android:layout_below="@+id/tvName"
+        android:layout_marginHorizontal="20dp"
+        android:maxLines="1"/>
 
     <TextView
         android:id="@+id/tvphone"
@@ -37,13 +40,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etName"
         android:text=" phone number"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp" />
 
     <EditText
         android:id="@+id/etphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvphone" />
+        android:layout_below="@+id/tvphone"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="number"
+        android:maxLines="1"/>
 
     <TextView
         android:id="@+id/tvpassword"
@@ -51,13 +58,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etphone"
         android:text="Enter Password"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/etpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvpassword" />
+        android:layout_below="@+id/tvpassword"
+        android:layout_marginHorizontal="20dp"
+        android:maxLines="1"/>
 
     <TextView
         android:id="@+id/tvconfirm"
@@ -65,51 +75,74 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etpassword"
         android:text="Confirm password"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/etconfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvconfirm" />
+        android:layout_below="@+id/tvconfirm"
+        android:layout_marginHorizontal="20dp"
+        android:maxLines="1"/>
+
     <TextView
         android:id="@+id/tvgender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender"
         android:layout_below="@+id/etconfirm"
-        android:textStyle="bold"/>
-    <RadioButton
-        android:id="@+id/rbtn"
-        android:layout_width="wrap_content"
+        android:text="Gender"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvgender"
-        android:text="Male" />
-    <RadioButton
-        android:id="@+id/rbtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rbtn"
-        android:text="Female"/>
-    <RadioButton
-        android:id="@+id/rbtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Others"
-        android:layout_below="@+id/rbtn1"/>
+        android:layout_below="@+id/tvgender">
+
+        <RadioButton
+            android:id="@+id/rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbtn"
+            android:text="Female"
+            android:layout_marginHorizontal="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbtn1"
+            android:text="Others"
+            android:layout_marginHorizontal="20dp"/>
+    </RadioGroup>
+
     <EditText
         android:id="@+id/etothers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/rgGender"
         android:hint="Enter your Gender"
-        android:layout_below="@+id/rbtn2"/>
+        android:layout_marginHorizontal="20dp"/>
+
     <Button
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="80dp"
         android:layout_below="@+id/etothers"
-        android:text="Register"/>
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="80dp"
+        android:text="Register" />
 
 
 </RelativeLayout>
